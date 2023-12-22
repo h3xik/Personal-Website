@@ -1,0 +1,124 @@
+.navbar {
+  @include titleTypography;
+  font-size: 100%;
+
+  &__logo,
+  &__nav {
+    .logo {
+      letter-spacing: 2px;
+    }
+    a {
+      color: inherit;
+      text-decoration: none;
+
+      &--gh {
+        color: $color-primary;
+
+        &:hover {
+          color: $color-accent;
+          box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+
+          transform: translateY(-2px);
+        }
+      }
+    }
+    &--link:hover {
+      color: $color-accent;
+      transform: translateY(-2px);
+    }
+  }
+}
+
+.navbar--mobile {
+  @include titleTypography;
+  font-size: 100%;
+
+  &__list {
+    list-style: none;
+  }
+}
+
+.title {
+  @include titleTypography;
+  font-weight: 600;
+
+  padding-bottom: 0.8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .name {
+    animation: glowUp 2.5s cubic-bezier(1, 0.045, 0.37, 0.95);
+    animation-fill-mode: forwards;
+    animation-delay: 0.5s;
+  }
+
+  &__name {
+    @include titleTypography;
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
+
+    margin-bottom: 5rem;
+  }
+
+  &__info {
+    @include titleTypography;
+    font-size: 0.9rem;
+    letter-spacing: 3px;
+    color: $color-accent;
+  }
+
+  &--purple {
+    color: $color-primary-button;
+  }
+}
+
+.codeblock__content__fill {
+  @include titleTypography;
+  font-weight: 400;
+  font-size: 1rem;
+  letter-spacing: 1.5px;
+  line-height: 2rem;
+  color: $color-primary;
+}
+
+.codeblock {
+  &__navbar__nav {
+    &__item {
+      font-family: "Noto Sans Mono", monospace;
+    }
+  }
+  &__content {
+    &__title,
+    &__fill__p {
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+    &__fill {
+      @include titleTypography;
+      font-size: 1rem;
+      line-height: 2rem;
+      font-weight: 350;
+    }
+  }
+
+  &__title {
+    @include titleTypography;
+    font-size: 1.2rem;
+    font-weight: 500;
+    letter-spacing: 1.5px;
+    color: $color-primary;
+  }
+}
+
+.nav__button {
+  @include titleTypography;
+  font-weight: 500;
+  font-size: 0.8rem;
+  color: $color-codeblock-text-inactive;
+
+  &[data-active="true"] {
+    color: $color-primary;
+  }
+}

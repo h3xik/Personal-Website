@@ -1,0 +1,13 @@
+.section__about {
+  @include section;
+  margin: 0 20vw;
+
+  perspective: 800px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  & > * {
+    background-color: $color-accent;
+  }
+}

@@ -1,0 +1,16 @@
+.header {
+  justify-self: center;
+  align-self: center;
+
+  text-align: center;
+  grid-column: 2 / 3;
+
+  .title {
+    animation: slideFromTop 1s cubic-bezier(1, 0.045, 0.37, 0.95);
+  }
+  .title__name,
+  .title__info {
+    animation: slideFromBottom 1.3s cubic-bezier(1, 0.045, 0.37, 0.95) 1s
+      backwards;
+  }
+}

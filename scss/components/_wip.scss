@@ -1,0 +1,10 @@
+.undergoing-work {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+
+  &__text {
+    @include titleTypography;
+    font-size: 2rem;
+  }
+}

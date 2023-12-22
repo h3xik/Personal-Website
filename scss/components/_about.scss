@@ -1,0 +1,81 @@
+/* .about__paragraph {
+  @include paragraphTypography;
+  font-size: 3vw;
+  width: 90%;
+
+  position: absolute;
+  &--1 {
+    @include about__paragraph__base;
+  }
+
+  &--2 {
+    @include about__paragraph__base;
+    font-size: 1.8rem;
+  }
+  &--3 {
+    @include about__paragraph__base;
+  }
+}
+
+.about__lottie--1 {
+  position: absolute;
+  top: 20%;
+  left: 80%;
+  opacity: 1;
+
+  width: max(50%, 300px);
+  height: max(50%, 300px);
+}
+
+@media screen and (max-width: 1100px) {
+  .about__paragraph {
+    font-size: 2rem;
+  }
+} */
+
+.about {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+
+  & > section:not(:last-child) {
+    margin-bottom: 10rem;
+  }
+
+  &__section {
+    display: flex;
+
+    align-items: center;
+    justify-content: end;
+
+    /*     &--1 {
+      display: flex;
+
+      align-items: center;
+      justify-content: end;
+      /* text-align: end; 
+    } */
+  }
+
+  &__text {
+    @include paragraphTypography;
+    font-size: 3vw;
+
+    flex-basis: 90%;
+
+    &--2 {
+      flex-basis: 80%;
+      font-size: 2rem;
+    }
+  }
+
+  &__lottie {
+    width: max(50%, 300px);
+    height: max(50%, 300px);
+
+    &--1 {
+      position: absolute;
+    }
+  }
+}
