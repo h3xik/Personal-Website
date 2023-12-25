@@ -828,6 +828,36 @@ body {
     font-size: 1.3rem;
   }
 }
+.navigation {
+  padding: 1.5em;
+  font-family: "JetBrains Mono", monospace;
+  color: #f5f3ff;
+  background-color: #131210;
+  -webkit-box-shadow: 0 30px 20px #131210;
+  box-shadow: 0 30px 20px #131210;
+}
+.navigation__list {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+.navigation__list__item a {
+  letter-spacing: 1.5px;
+  color: #6d28d9;
+  text-decoration: none;
+}
+.navigation__list__item button {
+  font-size: 1.5em;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+}
+.navigation__list__item button * {
+  transform: translateY(2.5px);
+}
+
 /* .timeline__cover {
   position: absolute;
   top: 0;

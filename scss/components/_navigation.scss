@@ -1,0 +1,38 @@
+.navigation {
+	padding: 1.5em;
+
+	font-family: 'JetBrains Mono', monospace;
+	color: $color-primary;
+	background-color: $color-secondary;
+
+	-webkit-box-shadow: 0 30px 20px $color-secondary;
+	box-shadow: 0 30px 20px $color-secondary;
+
+	&__list {
+		display: flex;
+		list-style: none;
+		justify-content: space-between;
+
+		align-items: center;
+		align-content: center;
+
+		&__item {
+			& a {
+				letter-spacing: 1.5px;
+				color: $color-brand;
+				text-decoration: none;
+			}
+
+			& button {
+				font-size: 1.5em;
+				color: inherit;
+				background-color: transparent;
+				border: none;
+
+				& * {
+					transform: translateY(2.5px);
+				}
+			}
+		}
+	}
+}
