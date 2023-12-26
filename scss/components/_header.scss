@@ -1,16 +1,32 @@
 .header {
-  justify-self: center;
-  align-self: center;
+    margin-top: 25vh;
+    text-align: center;
+    padding-inline: 13%;
 
-  text-align: center;
-  grid-column: 2 / 3;
+    &__title {
+        @include headerCommon;
+        font-size: 2.4rem;
+        font-weight: bold;
+    }
 
-  .title {
+    &__subtitle {
+        @include headerCommon;
+        margin-bottom: 5rem;
+        font-size: 0.9rem;
+    }
+
+    &__caption {
+        @include headerCommon;
+        font-size: 0.75rem;
+        color: $color-accent;
+    }
+}
+
+/*  .header__title {
     animation: slideFromTop 1s cubic-bezier(1, 0.045, 0.37, 0.95);
   }
-  .title__name,
-  .title__info {
+  .header__subtitle,
+  .header__caption {
     animation: slideFromBottom 1.3s cubic-bezier(1, 0.045, 0.37, 0.95) 1s
       backwards;
-  }
-}
+  }*/

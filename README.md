@@ -4,6 +4,7 @@
 - SCSS
 - Adobe Photoshop
 - Adobe Illustrator
+- Adobe Firefly
 
 
 ## CLI Cheatsheet
