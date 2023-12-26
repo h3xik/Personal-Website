@@ -37,6 +37,8 @@ jobs:
           cache: 'npm'
       - name: Install dependencies
         run: npm install
+      - name: Compile Sass to CSS
+        run: sass scss/main.scss:css/style.css
       - name: Build
         run: npm run build
       - name: Setup Pages
