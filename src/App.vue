@@ -1,28 +1,21 @@
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
+import Navigation from './components/Navigation.vue'
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-    </a>
-  </div>
-  <HelloWorld msg="Vite + Vue" />
-</template>
+  <Navigation />
 
-<style scoped>
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.vue:hover {
-  filter: drop-shadow(0 0 2em #42b883aa);
-}
-</style>
+  <div id="smooth-wrapper">
+    <div id="smooth-content" class="content-wrapper">
+      <header class="header" data-speed="1.5">
+        <h1 class="header__title">
+          <span class="text-purple">this.</span>jiří
+        </h1>
+        <h2 class="header__subtitle">Jiří Jurčenko</h2>
+        <p class="header__caption">Student, Web Developer, Software Engineer.</p>
+      </header>
+
+      <main></main>
+    </div>
+  </div>
+</template>
