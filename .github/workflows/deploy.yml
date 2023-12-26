@@ -38,7 +38,7 @@ jobs:
       - name: Install dependencies
         run: npm install
       - name: Compile Sass to CSS
-        run: npm run sass
+        run: npm run sass-compile
       - name: Build
         run: npm run build
       - name: Setup Pages
