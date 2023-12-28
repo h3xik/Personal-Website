@@ -1,7 +1,6 @@
 <script setup>
-import { onMounted } from 'vue';
 import gsap from '@h3xik/gsap-mod';
-
+import {onMounted} from "vue";
 import { useTransitionComposable } from './composables/transition-composable';
 import NavigationComponent from './components/NavigationComponent.vue';
 
