@@ -13,3 +13,7 @@ main {
     grid-template-columns: [timeline-start] 1fr [timeline-end content-start] repeat(6, 1fr) [content-end] 1fr;
   }
 }
+
+#smooth-content {
+  transition: all 2s ease;
+}

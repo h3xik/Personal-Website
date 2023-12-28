@@ -1,10 +1,11 @@
 .navigation {
-	position: relative;
+	position: fixed;
 	z-index: 2;
 	padding: 1.5em;
 	color: $color-primary;
 	background-color: $color-secondary;
 	box-shadow: 0 30px 20px $color-secondary;
+	width: 100%;
 
 	&__list {
 		display: flex;
@@ -38,17 +39,28 @@
 .navigation-mobile {
 	position: absolute;
 	top: 90vh;
-	padding-right: 1.5em;
 	overflow: hidden;
 	font-size: 1.5rem;
 	color: $color-primary;
 	text-align: right;
 	list-style: none;
-	background-color: purple;
 	transform: translate(-65%, -60%);
+	padding: 0.2em 1.5em 0.2em 0.2em;
+
+	&::after {
+		content: "";
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: 25%;
+		box-shadow: inset -11px 0px 12px 3px $color-secondary;
+		z-index: 3;
+	}
 
 	&__item {
 		margin: 0.5em 0;
+		z-index: 2;
 
 		& ion-icon {
 			margin-right: 50%;

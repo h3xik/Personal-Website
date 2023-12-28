@@ -40,6 +40,6 @@ onUnmounted(() => {
 
 <template>
   <main>
-    <p>aa</p>
+    <p class="box">aa</p>
   </main>
 </template>
