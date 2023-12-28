@@ -1,60 +1,66 @@
-@keyframes slideFromTop {
+@keyframes slide-top {
   0% {
     opacity: 0;
     transform: perspective(100px) rotateX(20deg) translateY(-100px);
   }
+
   80% {
     opacity: 0.2;
     transform: perspective(100px) rotateX(0deg) translateY(-100px);
   }
+
   100% {
     opacity: 1;
-    transform: perspective(20px) rotateX(0deg) translateY(0px);
+    transform: perspective(20px) rotateX(0deg) translateY(0);
   }
 }
 
-@keyframes glowUp {
+@keyframes glow-up {
   0%,
   50%,
   60%,
   100% {
     text-shadow: none;
   }
+
   25%,
   48%,
   52%,
   57%,
   62%,
   85% {
-    text-shadow: #fff 0px 0px 5px, #fff 0px 0px 10px,
-      2px 2px 2px rgba(206, 89, 55, 0);
+    text-shadow: #fff 0 0 5px, #fff 0 0 10px,
+      2px 2px 2px rgb(206 89 55 / 0%);
   }
 }
 
-@keyframes fadein {
+@keyframes fade-in {
   0% {
     opacity: 0;
   }
+
   100% {
     opacity: 1;
   }
 }
 
-@keyframes slideFromBottom {
+@keyframes slide-bottom {
   0% {
     opacity: 0;
     transform: translateY(100px);
   }
+
   100% {
     opacity: 1;
     transform: translateY(0);
   }
 }
 
-@keyframes timelineCoverSlide {
+@keyframes timeline-cover-slide {
   0% {
     transform: translateY(0);
   }
+
   100% {
     transform: translateY(-550px);
   }

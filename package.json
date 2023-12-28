@@ -8,16 +8,23 @@
     "build": "vite build",
     "preview": "vite preview",
     "sass": "sass --watch src/scss/main.scss:css/style.css",
-    "sass-compile": "sass src/scss/main.scss:css/style.css"
+    "sass-compile": "sass src/scss/main.scss:css/style.css",
+    "stylelint": "npx stylelint '**/*.scss'",
+    
+    "dev-env": "run-p dev sass ",
+    "build-preview": "run-s stylelint sass-compile build preview"
   },
   "dependencies": {
     "@h3xik/gsap-mod": "^3.12.3",
     "sass": "^1.69.5",
-    "vue": "^3.3.11"
+    "vue": "^3.3.11",
+    "vue-router": "^4.2.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^4.5.2",
     "npm-run-all": "^4.1.5",
+    "stylelint": "^16.1.0",
+    "stylelint-config-standard-scss": "^12.0.0",
     "vite": "^5.0.8"
   }
 }

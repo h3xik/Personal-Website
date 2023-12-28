@@ -5,12 +5,11 @@ body {
 main {
   transition: filter 0.5s ease-in-out;
   position: relative;
-
   display: grid;
   grid-template-columns: [timeline-start] 1fr [timeline-end content-start] 4fr [content-end] 1fr;
   grid-template-rows: [head-start] 100vh [head-end content-start] auto [content-end footer-start] max-content [footer-end];
 
-  @media screen and (max-width: 850px) {
+  @media screen and (width <= 850px) {
     grid-template-columns: [timeline-start] 1fr [timeline-end content-start] repeat(6, 1fr) [content-end] 1fr;
   }
 }

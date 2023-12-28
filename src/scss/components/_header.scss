@@ -4,21 +4,36 @@
     padding-inline: 13%;
 
     &__title {
-        @include headerCommon;
+        @include header-common;
+
         font-size: 2.4rem;
         font-weight: bold;
+
+        @media screen and (width >= 1000px) {
+            font-size: 2.8rem;
+        }
     }
 
     &__subtitle {
-        @include headerCommon;
+        @include header-common;
+
         margin-bottom: 5rem;
         font-size: 0.9rem;
+
+        @media screen and (width >= 1000px) {
+            font-size: 1rem;
+        }
     }
 
     &__caption {
-        @include headerCommon;
-        font-size: 0.75rem;
+        @include header-common;
+
+        font-size: 0.9rem;
         color: $color-accent;
+
+        @media screen and (width >= 1000px) {
+            font-size: 1rem;
+        }
     }
 }
 
@@ -29,4 +44,4 @@
   .header__caption {
     animation: slideFromBottom 1.3s cubic-bezier(1, 0.045, 0.37, 0.95) 1s
       backwards;
-  }*/
+  } */

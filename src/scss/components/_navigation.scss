@@ -1,24 +1,21 @@
 .navigation {
+	position: relative;
+	z-index: 2;
 	padding: 1.5em;
 	color: $color-primary;
-
 	background-color: $color-secondary;
-	-webkit-box-shadow: 0 30px 20px $color-secondary;
-
 	box-shadow: 0 30px 20px $color-secondary;
 
 	&__list {
 		display: flex;
 		list-style: none;
-		justify-content: space-between;
-
+		place-content: center space-between;
 		align-items: center;
-		align-content: center;
 
 		&__item {
 			& a {
 				letter-spacing: 1.5px;
-				color: $color-brand;
+				color: $color-primary;
 				text-decoration: none;
 			}
 
@@ -30,6 +27,36 @@
 				background-color: transparent;
 				border: none;
 			}
+
+			& > *:hover {
+				color: $color-accent;
+			}
+		}
+	}
+}
+
+.navigation-mobile {
+	position: absolute;
+	top: 90vh;
+	padding-right: 1.5em;
+	overflow: hidden;
+	font-size: 1.5rem;
+	color: $color-primary;
+	text-align: right;
+	list-style: none;
+	background-color: purple;
+	transform: translate(-65%, -60%);
+
+	&__item {
+		margin: 0.5em 0;
+
+		& ion-icon {
+			margin-right: 50%;
+			transform: translateX(100%);
+		}
+
+		& > *:hover {
+			color: $color-accent;
 		}
 	}
 }

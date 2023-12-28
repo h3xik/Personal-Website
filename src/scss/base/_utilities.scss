@@ -2,20 +2,21 @@
   opacity: 0 !important;
   display: none;
 }
-.display--none {
+
+.display-none {
   display: none !important;
 }
 
 .blur-10px {
-  -webkit-filter: blur(10px);
   filter: blur(10px);
 }
 
 /* Třídy barvy textu: */
 .text-purple {
-  color: $color-brand;
+  color: $color-brand !important;
 }
-.text--accent {
+
+.text-accent {
   color: $color-accent;
 }
 

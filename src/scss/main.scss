@@ -1,24 +1,23 @@
-// 3rd Party
+// Normalize <-
 @import "dist/normalize";
 
+// Abstracts <-
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
+// Base files <-
 @import "base/animations";
 @import "base/base";
 @import "base/typography";
 @import "base/utilities";
 
-@import "components/about";
+// Components <-
 @import "components/footer";
-@import "components/navbar--mobile";
-@import "components/navbar";
-@import "components/navigation";
-@import "components/timeline";
 @import "components/header";
-@import "components/wip";
+@import "components/navigation";
 
-@import "layout/sectionAbout";
+// Layout <-
 
+// Page specific <-
 @import "pages/404";
 @import "pages/mainpage";

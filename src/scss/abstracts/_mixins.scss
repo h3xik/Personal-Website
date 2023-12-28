@@ -1,39 +1,33 @@
-@mixin titleTypography {
+@mixin title-typography {
 	font-family: 'Noto Sans Mono', monospace;
 	font-weight: 400;
 	font-size: 2.5rem;
 	letter-spacing: 1.1px;
 	color: $color-primary;
-
 	text-decoration: none;
 }
 
-@mixin headerCommon {
+@mixin header-common {
 	color: $color-primary;
 	font-weight: 400;
 	letter-spacing: 1.5px;
 }
 
-@mixin paragraphTypography {
+@mixin paragraph-typography {
 	font-family: 'Noto Sans Mono', monospace;
 	font-weight: 400;
 	font-size: 1rem;
 	letter-spacing: 1.1px;
 	color: $color-primary;
-
 	text-decoration: none;
 }
 
-@mixin timelinePoint {
+@mixin timeline-toint {
 	position: absolute;
 	transform: translateX(-19px);
-
 	color: $color-primary;
 	background-color: $color-secondary;
-
 	font-size: 2.5rem;
-
-	-webkit-box-shadow: 0 0 5px 5px $color-secondary;
 	box-shadow: 0 0 5px 5px $color-secondary;
 	border-radius: 50%;
 }
@@ -42,6 +36,7 @@
 	position: relative;
 
 	/*   margin: 0 25vw; */
+
 	/*   min-height: 100vh;
     perspective: 900px;
     perspective-origin: 50% 50vh;
@@ -52,10 +47,5 @@
 	display: inherit;
 	align-items: center;
 	justify-content: flex-end;
-
 	z-index: 101;
-}
-
-@mixin about__paragraph__base {
-	left: 22%;
 }

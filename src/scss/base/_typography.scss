@@ -1,5 +1,6 @@
 .navbar {
-  @include titleTypography;
+  @include title-typography;
+
   font-size: 100%;
 
   &__logo,
@@ -7,6 +8,7 @@
     .logo {
       letter-spacing: 2px;
     }
+
     a {
       color: inherit;
       text-decoration: none;
@@ -16,12 +18,12 @@
 
         &:hover {
           color: $color-accent;
-          box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
-
+          box-shadow: 10px 10px 5px 0 rgb(0 0 0 / 75%);
           transform: translateY(-2px);
         }
       }
     }
+
     &--link:hover {
       color: $color-accent;
       transform: translateY(-2px);

@@ -8,7 +8,11 @@
 
 
 ## CLI Cheatsheet
-Run dev server:
+
 ```bash
+-> Run dev server:
 run-p dev sass 
+
+-> Run build & preview:
+run-s stylelint sass-compile build preview
 ```

@@ -6,6 +6,7 @@ const config = {
     semi: true,
     singleQuote: true,
     arrowParens: "avoid",
+    printWidth: 100,
 };
 
 export default config;
