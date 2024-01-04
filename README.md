@@ -25,6 +25,7 @@
     </div>
 </div>
 
+`#F9DBBD`
 
 ## CLI Cheatsheet
 
