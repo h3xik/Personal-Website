@@ -2,12 +2,11 @@
 import gsap from '@h3xik/gsap-mod';
 import { ScrollTrigger } from '@h3xik/gsap-mod/ScrollTrigger';
 import { ScrollSmoother } from '@h3xik/gsap-mod/ScrollSmoother';
-import { ScrollToPlugin } from '@h3xik/gsap-mod/ScrollToPlugin';
-
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 import { onMounted, onUnmounted, ref } from 'vue';
 import { useTransitionComposable } from './composables/transition-composable';
+
 import NavigationComponent from './components/NavigationComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
 
@@ -36,7 +35,7 @@ const onLeave = (el, done) => {
 // Methods
 const toggleScroll = () => {
 	smoother.paused(!smoother.paused());
-  toggleBlur.value = !toggleBlur.value;
+	toggleBlur.value = !toggleBlur.value;
 };
 
 const main = ref();
@@ -48,8 +47,9 @@ onMounted(() => {
 	toggleTransitionComplete(true);
 	ctx = gsap.context(() => {
 		smoother = ScrollSmoother.create({
-			smooth: 1,
-			effects: true,
+			smooth: 0,
+      smoothTouch: 0.1,
+      effects: true,
 		});
 	}, main.value);
 });
@@ -72,6 +72,7 @@ onUnmounted(() => {
 					<component :is="Component" />
 				</Transition>
 			</RouterView>
+
 			<FooterComponent />
 		</div>
 	</div>
