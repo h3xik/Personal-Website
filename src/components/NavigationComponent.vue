@@ -1,6 +1,7 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue';
 import gsap from '@h3xik/gsap-mod';
+// import { Power4 } from "@h3xik/gsap-mod";
 
 const main = ref();
 let tl;
@@ -15,12 +16,18 @@ onMounted(() => {
 		const links = self.selector('.navigation-mobile__item');
 		tl = gsap
 			.timeline()
-			.fromTo(links[3], { x: 130 }, { x: 0, duration: 0.3 }, '>0.2')
+			.fromTo(
+				links[3],
+				{ x: 130 },
+				{ x: 0, ease: 'Power4.inOut', duration: 0.3 },
+				'>0.2'
+			)
 			.fromTo(
 				links[2],
 				{ x: 130 },
 				{
 					x: 0,
+					ease: 'Power4.inOut',
 					duration: 0.3,
 				},
 				'>0.2'
@@ -30,15 +37,17 @@ onMounted(() => {
 				{ x: 130 },
 				{
 					x: 0,
+					ease: 'Power4.inOut',
 					duration: 0.3,
 				},
 				'>0.2'
 			)
 			.fromTo(
 				links[0],
-				{ x: 110 },
+				{ x: 130 },
 				{
 					x: 0,
+					ease: 'Power4.inOut',
 					duration: 0.3,
 				},
 				'>0.2'
