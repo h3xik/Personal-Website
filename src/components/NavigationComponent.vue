@@ -1,30 +1,10 @@
 <script setup>
-import { onMounted, onUnmounted, ref, watchEffect } from 'vue';
-import { useRoute } from 'vue-router';
+import { onMounted, onUnmounted, ref } from 'vue';
 import gsap from '@h3xik/gsap-mod';
 
 const main = ref();
 let tl;
 let ctx;
-
-const route = useRoute();
-const activeRoute = ref('');
-
-let isMainActive = false;
-let isAboutActive = false;
-
-/*watchEffect(() => {
-	activeRoute.value = route.path;
-
-	switch (activeRoute.value) {
-		case '/':
-			isMainActive = true;
-			break;
-		case '/about':
-			isAboutActive = true;
-			break;
-	}
-});*/
 
 const showMenu = function () {
 	tl.reversed(!tl.reversed());
@@ -35,10 +15,34 @@ onMounted(() => {
 		const links = self.selector('.navigation-mobile__item');
 		tl = gsap
 			.timeline()
-			.from(links[3], { x: 130, duration: 0.3, ease: 'power1.out' })
-			.from(links[2], { x: 130, duration: 0.3, ease: 'power2' }, '>0.2')
-			.from(links[1], { x: 130, duration: 0.3, ease: 'power1.out' }, '>0.2')
-			.from(links[0], { x: 130, duration: 0.3, ease: 'power1.out' }, '>0.2')
+			.fromTo(links[3], { x: 130 }, { x: 0, duration: 0.3 }, '>0.2')
+			.fromTo(
+				links[2],
+				{ x: 130 },
+				{
+					x: 0,
+					duration: 0.3,
+				},
+				'>0.2'
+			)
+			.fromTo(
+				links[1],
+				{ x: 130 },
+				{
+					x: 0,
+					duration: 0.3,
+				},
+				'>0.2'
+			)
+			.fromTo(
+				links[0],
+				{ x: 110 },
+				{
+					x: 0,
+					duration: 0.3,
+				},
+				'>0.2'
+			)
 			.reverse();
 	}, main.value);
 });

@@ -3,16 +3,7 @@ import {onBeforeUnmount, onMounted, onUnmounted, ref} from 'vue';
 import gsap from '@h3xik/gsap-mod';
 
 const main = ref();
-/*const isUnmounted = ref(false);
-let ctx;
 
-onBeforeUnmount(() => {
-  isUnmounted.value = true;
-});
-
-onUnmounted(() => {
-	ctx.revert(); // <- Easy Cleanup!
-});*/
 </script>
 
 <template>
