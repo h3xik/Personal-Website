@@ -29,7 +29,7 @@
         @include header-common;
 
         font-size: 0.9rem;
-        color: $color-accent;
+        color: $c-brand-light;
 
         @media screen and (width >= 1000px) {
             font-size: 1rem;

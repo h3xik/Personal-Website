@@ -39,7 +39,10 @@ onUnmounted(() => {
 </script>
 
 <template>
-  <main>
-    <p class="box">aa</p>
-  </main>
+  <section class="boxes-container" ref="main">
+    <h1>Use the button to toggle a Timelineaaaa</h1>
+    <div>
+      <button>Toggle Timeline</button>
+    </div>
+  </section>
 </template>

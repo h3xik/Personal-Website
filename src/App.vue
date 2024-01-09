@@ -2,8 +2,9 @@
 import gsap from '@h3xik/gsap-mod';
 import { ScrollTrigger } from '@h3xik/gsap-mod/ScrollTrigger';
 import { ScrollSmoother } from '@h3xik/gsap-mod/ScrollSmoother';
+import { ScrollToPlugin } from '@h3xik/gsap-mod/ScrollToPlugin';
 
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 
 import { onMounted, onUnmounted, ref } from 'vue';
 import { useTransitionComposable } from './composables/transition-composable';
@@ -52,13 +53,6 @@ onMounted(() => {
 			smooth: 1,
 			effects: true,
 		});
-		/*ScrollTrigger.create({
-      trigger: '.box-c',
-      pin: true,
-      start: 'center center',
-      end: '+=300',
-      markers: true,
-    });*/
 	}, main.value);
 });
 onUnmounted(() => {

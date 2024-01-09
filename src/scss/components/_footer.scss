@@ -9,12 +9,12 @@
   &__title {
     margin-inline: 13%;
     margin-bottom: 65px;
-    color: $color-secondary-light;
+    color: $c-black-light;
   }
 
   &__list {
     list-style: none;
-    color: $color-accent;
+    color: $c-brand-light;
 
     &--main {
       display: flex;
@@ -39,7 +39,7 @@
 
   &__text {
     text-align: center;
-    color: $color-secondary-light;
+    color: $c-black-light;
     font-size: 0.9rem;
     padding-bottom: 50px;
   }

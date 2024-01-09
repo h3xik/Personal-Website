@@ -3,12 +3,12 @@
 	font-weight: 400;
 	font-size: 2.5rem;
 	letter-spacing: 1.1px;
-	color: $color-primary;
+	color: $c-white;
 	text-decoration: none;
 }
 
 @mixin header-common {
-	color: $color-primary;
+	color: $c-white;
 	font-weight: 400;
 	letter-spacing: 1.5px;
 }
@@ -18,17 +18,17 @@
 	font-weight: 400;
 	font-size: 1rem;
 	letter-spacing: 1.1px;
-	color: $color-primary;
+	color: $c-white;
 	text-decoration: none;
 }
 
 @mixin timeline-toint {
 	position: absolute;
 	transform: translateX(-19px);
-	color: $color-primary;
-	background-color: $color-secondary;
+	color: $c-white;
+	background-color: $c-black;
 	font-size: 2.5rem;
-	box-shadow: 0 0 5px 5px $color-secondary;
+	box-shadow: 0 0 5px 5px $c-black;
 	border-radius: 50%;
 }
 

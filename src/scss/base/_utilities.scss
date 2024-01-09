@@ -13,11 +13,11 @@
 
 /* Třídy barvy textu: */
 .text-purple {
-  color: $color-brand !important;
+  color: $c-brand;
 }
 
 .text-accent {
-  color: $color-accent;
+  color: $c-brand-light;
 }
 
 .mb-extrasmall {
@@ -42,5 +42,5 @@
 }
 
 .c-white {
-  color: $color-primary !important;
+  color: $c-white !important;
 }
