@@ -1,46 +1,7 @@
-.hidden-opacity {
-  opacity: 0 !important;
-  display: none;
-}
-
-.display-none {
-  display: none !important;
-}
-
 .blur-10px {
   filter: blur(10px);
 }
 
-/* Třídy barvy textu: */
-.text-purple {
-  color: $c-brand;
-}
-
-.text-accent {
-  color: $c-brand-light;
-}
-
-.mb-extrasmall {
-  margin-bottom: 10px !important;
-}
-
-.mb-small {
-  margin-bottom: 25px !important;
-}
-
-.mt-40p {
-  margin-top: 40%;
-}
-
-.underline {
-  text-decoration: underline;
-  text-underline-offset: 5px;
-}
-
 .ion-center {
   transform: translateY(12%);
-}
-
-.c-white {
-  color: $c-white !important;
 }
