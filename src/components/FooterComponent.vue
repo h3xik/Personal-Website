@@ -1,24 +1,16 @@
-<script setup>
-import { Vue3Lottie } from "vue3-lottie";
+<script setup lang="ts">
+import '@dotlottie/player-component';
 </script>
 
 <template>
 	<footer class="footer">
-<!--    <Vue3Lottie
-        animationLink="https://lottie.host/c5307df6-e32d-439f-b32d-1e3ff259f31c/AgUHNPgw9W.json"
-        :height="300"
-        :width="300"
-    />-->
-    <Vue3Lottie
-        ref="customControl"
-        animationLink="https://lottie.host/c5307df6-e32d-439f-b32d-1e3ff259f31c/AgUHNPgw9W.json"
-        :height="300"
-        :width="300"
-        :loop="true"
-        :speed="1"
-        :autoPlay="true"
+    <dotlottie-player
+        class="footer__lottie"
+        src="https://lottie.host/7524b2dc-1b44-431d-9b36-9c8e19675f6f/Qv7gutcirl.lottie"
+        loop
+        autoplay
     />
-
+    
 		<h4 class="footer__title">Vytvořeno s pomocí:</h4>
 		<ul class="footer__list footer__list--main">
 			<li>

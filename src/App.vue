@@ -1,14 +1,14 @@
 <script setup>
-import gsap from '@h3xik/gsap-mod';
-import { ScrollTrigger } from '@h3xik/gsap-mod/ScrollTrigger';
-import { ScrollSmoother } from '@h3xik/gsap-mod/ScrollSmoother';
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-
 import { onMounted, onUnmounted, ref } from 'vue';
 import { useTransitionComposable } from './composables/transition-composable';
 
 import NavigationComponent from './components/NavigationComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
+
+import gsap from '@h3xik/gsap-mod';
+import { ScrollTrigger } from '@h3xik/gsap-mod/ScrollTrigger';
+import { ScrollSmoother } from '@h3xik/gsap-mod/ScrollSmoother';
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const { toggleTransitionComplete } = useTransitionComposable();
 
@@ -48,8 +48,7 @@ onMounted(() => {
 	ctx = gsap.context(() => {
 		smoother = ScrollSmoother.create({
 			smooth: 0,
-      smoothTouch: 0.1,
-      effects: true,
+			effects: true,
 		});
 	}, main.value);
 });
@@ -58,22 +57,15 @@ onUnmounted(() => {
 });
 </script>
 
-<template>
+<template ref="main">
 	<NavigationComponent @toggleScroll="toggleScroll" />
-	<div id="smooth-wrapper" ref="main">
-		<div id="smooth-content" v-bind:class="{ 'blur-10px': toggleBlur }">
-			<RouterView v-slot="{ Component }">
-				<Transition
-					@enter="onEnter"
-					@leave="onLeave"
-					name="routes"
-					mode="out-in"
-				>
-					<component :is="Component" />
-				</Transition>
-			</RouterView>
-
-			<FooterComponent />
-		</div>
+	<div v-bind:class="{ 'blur-10px': toggleBlur }">
+		<RouterView v-slot="{ Component }">
+			<Transition @enter="onEnter" @leave="onLeave" name="routes" mode="out-in">
+				<component :is="Component" />
+			</Transition>
+		</RouterView>
+    
+    <FooterComponent />
 	</div>
 </template>

@@ -1,7 +1,7 @@
 <script setup>
 import { onMounted, onUnmounted, ref } from 'vue';
+
 import gsap from '@h3xik/gsap-mod';
-// import { Power4 } from "@h3xik/gsap-mod";
 
 const main = ref();
 let tl;
