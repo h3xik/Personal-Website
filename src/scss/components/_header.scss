@@ -7,7 +7,11 @@
         @include header-common;
 
         font-size: 2.4rem;
-        font-weight: bold;
+        font-weight: 500;
+        
+        & > span {
+            color: $c-brand-darker;
+        }
 
         @media screen and (width >= 1000px) {
             font-size: 2.8rem;
@@ -19,6 +23,7 @@
 
         margin-bottom: 5rem;
         font-size: 0.9rem;
+        color: $c-white;
 
         @media screen and (width >= 1000px) {
             font-size: 1rem;
