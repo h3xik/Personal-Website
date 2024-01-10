@@ -12,7 +12,6 @@ css
 /dist
 dist-ssr
 *.local
-.npmrc
 
 # Editor directories and files
 .vscode/*
