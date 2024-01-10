@@ -7,7 +7,7 @@ export default defineConfig({
     vue({
       template: {
         compilerOptions: {
-          isCustomElement: (tag) => ['ion-icon', 'dotlottie-player', 'Vue3Lottie'].includes(tag),
+          isCustomElement: (tag) => ['ion-icon', 'dotlottie-player', 'lottie-vue-player'].includes(tag),
         }
       }
     }),
