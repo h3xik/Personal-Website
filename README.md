@@ -10,7 +10,7 @@
 ### Color palette
 <p><a href="https://h3xik.github.io"><img width="80%" alt="h3xik.github.io" src="./public/Palette.png" /></a></p>
 
-## CLI Cheatsheet
+### CLI Cheatsheet
 
 ```bash
 -> Run dev server:
