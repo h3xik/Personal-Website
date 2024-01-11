@@ -11,7 +11,8 @@
     "sass-compile": "sass src/scss/main.scss:css/style.css",
     "stylelint": "npx stylelint '**/*.scss'",
     "dev-env": "run-p dev sass ",
-    "build-preview": "run-s stylelint sass-compile build preview"
+    "build-preview": "run-s stylelint sass-compile build preview",
+    "deploy": "run-s sass-compile build"
   },
   "dependencies": {
     "@dotlottie/player-component": "^2.7.5",
