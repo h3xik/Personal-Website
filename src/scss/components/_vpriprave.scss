@@ -1,0 +1,38 @@
+.vpriprave {
+    display: grid;
+    grid-template-columns: max-content 1fr;
+    grid-template-rows: auto;
+    justify-items: center;
+    padding: 13% 2em 5em 13%;
+    color: $c-white;
+    overflow: hidden;
+    
+    & > p {
+        font-size: 1.2rem;
+        margin-left: 0.5em;
+        
+        & > span {
+            color: $c-brand-white;
+        }
+
+        @media screen and (width > 590px) {
+            font-size: 1.5rem;
+        }
+    }
+
+    &__lottie {
+        margin-top: 1em;
+        height: 300px;
+        width: 300px;
+        transform: translate(-35%, -5%);
+
+        @media screen and (width > 590px) {
+            transform: scale(140%);
+        }
+    }
+    
+    @media screen and (width > 590px) {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+}
