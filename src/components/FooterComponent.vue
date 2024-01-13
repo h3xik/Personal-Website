@@ -9,6 +9,7 @@ import '@dotlottie/player-component';
         src="https://lottie.host/7524b2dc-1b44-431d-9b36-9c8e19675f6f/Qv7gutcirl.lottie"
         loop
         autoplay
+        loading="lazy"
     />
     
 		<h4 class="footer__title">Vytvořeno s pomocí:</h4>
