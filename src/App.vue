@@ -36,13 +36,13 @@ const onLeave = (el, done) => {
 // Methods
 const toggleScroll = () => {
   smoother.paused(!smoother.paused());
-  toggleBlur.value = !toggleBlur.value;
+  disableMain.value = !disableMain.value;
 };
 
 const main = ref();
 let smoother;
 let ctx;
-let toggleBlur = ref(false);
+let disableMain = ref(false);
 
 onMounted(() => {
   toggleTransitionComplete(true);
@@ -60,7 +60,7 @@ onUnmounted(() => {
 
 <template ref="main">
   <NavigationComponent @toggleScroll="toggleScroll"/>
-  <div v-bind:class="{ 'blur-10px': toggleBlur }" id="smooth-content">
+  <div v-bind:class="{ 'disable': disableMain }" id="smooth-content">
     <RouterView v-slot="{ Component }">
       <Transition @enter="onEnter" @leave="onLeave" name="routes" mode="out-in">
         <component :is="Component"/>
