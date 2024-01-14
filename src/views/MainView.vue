@@ -43,7 +43,7 @@ onUnmounted(() => {
           class="vpriprave__lottie"
           src="https://lottie.host/78bdf20e-d4a2-43a9-af27-0b178c6fb7f5/LmwwozTi1I.lottie"
           autoplay
-      />
+      ></dotlottie-player>
     </main>
     
     
