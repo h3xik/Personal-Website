@@ -1,5 +1,7 @@
 <script setup>
 import { onUnmounted, ref, watch } from 'vue';
+
+import '@dotlottie/player-component';
 import gsap from '@h3xik/gsap-mod';
 
 import { useTransitionComposable } from '../composables/transition-composable';

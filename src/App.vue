@@ -5,6 +5,7 @@ import {useTransitionComposable} from './composables/transition-composable';
 import NavigationComponent from './components/NavigationComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
 
+import '@dotlottie/player-component';
 import gsap from '@h3xik/gsap-mod';
 import {ScrollTrigger} from '@h3xik/gsap-mod/ScrollTrigger';
 import {ScrollSmoother} from '@h3xik/gsap-mod/ScrollSmoother';

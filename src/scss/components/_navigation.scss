@@ -2,11 +2,11 @@
 	position: fixed;
 	top: 0;
 	z-index: 2;
-	padding: 1.5em;
+	padding: 1.5em 0;
 	color: $c-white;
 	background-color: $c-black;
 	box-shadow: 0 30px 20px $c-black;
-	width: 100%;
+	width: calc(100% - 2rem);
 
 	&__list {
 		display: flex;
