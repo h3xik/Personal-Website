@@ -1,58 +1,22 @@
 .nf {
-  position: relative;
-  height: 100vh;
-  width: 100vw;
-  overflow: hidden;
-
-  &-header {
     text-align: center;
-    display: block;
-    margin-top: max(225px, 20%);
+    display: flex;
+    justify-content: center;
+    height: 98vh;
+    overflow: hidden;
 
-    &__title {
-      @include title-typography;
-      
-      font-weight: 500;
-      font-size: min(8vw, 3rem);
+    &__header {
+        color: $c-brand-white;
+        margin-top: 8em;
+        
+        & > span { color: $c-brand-darker; }
     }
-    
-    &__paragraph {
-      @include paragraph-typography;
-      
-      font-weight: 500;
 
-      &--link {
-        display: inline-block;
-        margin-top: 20px;
-        text-underline-offset: 4px;
-        transition: all 0.2s ease-in-out;
-
-        &:hover {
-          transform: translateY(-2px);
-          text-underline-offset: 8px;
-        }
-      }
+    &__lottie {
+        position: absolute;
+        top: 45%;
+        right: -4.5rem;
+        height: 450px;
+        width: 450px;
     }
-  }
-}
-
-.nf-lottie {
-  width: max(900px, 50%);
-  height: max(500px, 50%);
-  position: absolute;
-  top: 70%;
-  left: 75%;
-  transform: translate(-50%, -50%);
-  z-index: -1;
-}
-
-@media screen and (width <= 950px) {
-  .nf-header {
-    margin-top: 150px;
-  }
-  
-  .nf-lottie {
-    top: 70%;
-    right: 30%;
-  }
 }
