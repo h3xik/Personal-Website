@@ -5,14 +5,17 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev-host": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
     "sass": "sass --watch src/scss/main.scss:css/style.css",
     "sass-compile": "sass src/scss/main.scss:css/style.css",
     "stylelint": "npx stylelint '**/*.scss'",
-    "dev-env": "run-p dev sass ",
     "build-preview": "run-s stylelint sass-compile build preview",
-    "deploy": "run-s sass-compile build"
+    "deploy": "run-s sass-compile build",
+
+    "dev-env": "run-p dev sass ",
+    "dev-env-host": "run-p dev-host sass "
   },
   "dependencies": {
     "@dotlottie/player-component": "^2.7.5",
