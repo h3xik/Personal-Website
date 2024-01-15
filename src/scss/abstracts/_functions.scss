@@ -1,0 +1,3 @@
+@function fluidTypography($font-size, $max-size) {
+    @return clamp($font-size, 1.0774rem + 3.7936vw, $max-size);
+}

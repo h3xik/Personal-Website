@@ -14,15 +14,13 @@ onMounted(() => {
   ctx = gsap.context(self => {
     const links = self.selector('.navigation-mobile__item');
     
-    tl = gsap
+/*    tl = gsap
         .timeline()
-        .fromTo(
-            links[3],
-            { x: 130 },
-            { x: 0, ease: 'Power4.inOut', duration: 0.3 },
-            '>0.2'
+        .from(
+            ".header",
+            { y: "+=50" },
         )
-        .reverse();
+        .reverse();*/
   }, main.value);
 });
 
@@ -45,7 +43,7 @@ onUnmounted(() => {
           class="vpriprave__lottie"
           src="https://lottie.host/78bdf20e-d4a2-43a9-af27-0b178c6fb7f5/LmwwozTi1I.lottie"
           autoplay
-      />
+      ></dotlottie-player>
     </main>
     
     

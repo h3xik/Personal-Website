@@ -1,7 +1,9 @@
-.blur-10px {
-  filter: blur(10px);
-}
+.disable { filter: blur(10px) brightness(40%); }
+.ion-center { transform: translateY(12%); }
 
-.ion-center {
-  transform: translateY(12%);
-}
+/* Margins */
+.mt-xs { margin-top: 5rem }
+.mt-s { margin-top: 10rem }
+.mt-m { margin-top: 15rem }
+.mt-l { margin-top: 20rem }
+.mt-xl { margin-top: 25rem }

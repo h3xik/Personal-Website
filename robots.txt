@@ -1,0 +1,3 @@
+User-agent: *
+Robot-version: 2.0
+Allow: /*

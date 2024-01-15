@@ -1,53 +1,28 @@
 .header {
-    margin-top: 25vh;
-    margin-bottom: 20vw;
+    margin: 25vh auto 20vw;
     text-align: center;
     padding-inline: 13%;
 
     &__title {
-        @include header-common;
-
-        font-size: 2.4rem;
-        font-weight: 500;
+        @include header;
         
-        & > span {
-            color: $c-brand-darker;
-        }
+        font-size: fluidTypography(2.4rem, 3.2rem);
+        font-weight: 500;
 
-        @media screen and (width >= 1000px) {
-            font-size: 2.8rem;
-        }
+        & > span { color: $c-brand-darker; }
     }
 
     &__subtitle {
-        @include header-common;
+        @include header;
 
         margin-bottom: 5rem;
-        font-size: 0.9rem;
-        color: $c-white;
-
-        @media screen and (width >= 1000px) {
-            font-size: 1rem;
-        }
+        font-size: fluidTypography(0.75rem, 1rem);
     }
 
     &__caption {
-        @include header-common;
+        @include header;
 
-        font-size: 0.9rem;
+        font-size: fluidTypography(0.65rem, 0.9rem);
         color: $c-brand-lighter;
-
-        @media screen and (width >= 1000px) {
-            font-size: 1rem;
-        }
     }
 }
-
-/*  .header__title {
-    animation: slideFromTop 1s cubic-bezier(1, 0.045, 0.37, 0.95);
-  }
-  .header__subtitle,
-  .header__caption {
-    animation: slideFromBottom 1.3s cubic-bezier(1, 0.045, 0.37, 0.95) 1s
-      backwards;
-  } */

@@ -1,4 +1,4 @@
-import { createRouter, createWebHistory } from 'vue-router';
+import {createRouter, createWebHistory} from 'vue-router';
 import Main from '../views/MainView.vue';
 
 const router = createRouter({
@@ -13,6 +13,11 @@ const router = createRouter({
             path: '/about',
             name: 'about',
             component: () => import('../views/AboutView.vue'),
+        },
+        {
+            path: '/:pathMatch(.*)*',
+            name: 'not-found', 
+            component:  () => import('../views/NotFoundView.vue')
         },
     ],
 });

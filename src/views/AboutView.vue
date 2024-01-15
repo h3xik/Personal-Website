@@ -1,5 +1,7 @@
 <script setup>
 import { onUnmounted, ref, watch } from 'vue';
+
+import '@dotlottie/player-component';
 import gsap from '@h3xik/gsap-mod';
 
 import { useTransitionComposable } from '../composables/transition-composable';
@@ -33,16 +35,18 @@ watch(
     }
 );
 
-onUnmounted(() => {
+/*onUnmounted(() => {
   ctx.revert(); // <- Easy Cleanup!
-});
+});*/
 </script>
 
 <template>
-  <section class="boxes-container" ref="main">
-    <h1>Use the button to toggle a Timelineaaaa</h1>
-    <div>
-      <button>Toggle Timeline</button>
-    </div>
-  </section>
+  <main class="vpriprave mt-m">
+    <p>Web je v <span>přípravě</span>.</p>
+    <dotlottie-player
+        class="vpriprave__lottie"
+        src="https://lottie.host/78bdf20e-d4a2-43a9-af27-0b178c6fb7f5/LmwwozTi1I.lottie"
+        autoplay
+    />
+  </main>
 </template>
