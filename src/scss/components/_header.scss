@@ -1,5 +1,6 @@
 .header {
-    margin: 25vh auto 20vw;
+    height: 75vh;
+    margin: 25vh auto 0;
     text-align: center;
     padding-inline: 13%;
 
@@ -8,7 +9,7 @@
         
         font-size: fluidTypography(2.4rem, 3.2rem);
         font-weight: 500;
-
+        
         & > span { color: $c-brand-darker; }
     }
 
