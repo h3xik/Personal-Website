@@ -1,6 +1,5 @@
 <script setup>
 import {onMounted, onUnmounted, ref} from 'vue';
-import {useTransitionComposable} from './composables/transition-composable';
 
 import NavigationComponent from './components/NavigationComponent.vue';
 import FooterComponent from './components/FooterComponent.vue';
@@ -11,28 +10,6 @@ import {ScrollTrigger} from '@h3xik/gsap-mod/ScrollTrigger';
 import {ScrollSmoother} from '@h3xik/gsap-mod/ScrollSmoother';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
-
-const {toggleTransitionComplete} = useTransitionComposable();
-
-const onEnter = (el, done) => {
-  gsap.set(el, {autoAlpha: 0, scale: 0.8});
-  gsap.timeline({
-    paused: true,
-    onComplete() {
-      toggleTransitionComplete(true);
-      done();
-    },
-  })
-      .to(el, {autoAlpha: 1, scale: 1, duration: 0.25})
-      .play();
-};
-
-const onLeave = (el, done) => {
-  toggleTransitionComplete(false);
-  gsap.timeline({paused: true, onComplete: done})
-      .to(el, {scale: 0.8, autoAlpha: 0, duration: 0.2})
-      .play();
-};
 
 // Methods
 const toggleScroll = () => {
@@ -46,7 +23,6 @@ let ctx;
 let disableMain = ref(false);
 
 onMounted(() => {
-  toggleTransitionComplete(true);
   ctx = gsap.context(() => {
     smoother = ScrollSmoother.create({
       smooth: 0,
@@ -62,11 +38,17 @@ onUnmounted(() => {
 <template ref="main">
   <NavigationComponent @toggleScroll="toggleScroll"/>
   <div v-bind:class="{ 'disable': disableMain }" id="smooth-content">
-    <RouterView v-slot="{ Component }">
-      <Transition @enter="onEnter" @leave="onLeave" name="routes" mode="out-in">
-        <component :is="Component"/>
-      </Transition>
-    </RouterView>
+    
+    <section ref="main">
+      <header class="header" data-speed="1.5">
+        <h1 class="header__title"><span>this.</span>jiří</h1>
+        <h2 class="header__subtitle">Jiří Jurčenko</h2>
+        <p class="header__caption">Student, Web Developer, Software Engineer.</p>
+      </header>
+      
+
+
+    </section>
 
     <FooterComponent/>
   </div>
