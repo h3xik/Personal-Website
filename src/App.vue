@@ -19,14 +19,20 @@ const toggleScroll = () => {
 
 const main = ref();
 let disableMain = ref(false);
-let smoother, ctx;
+let smoother, ctx, tl;
 
 onMounted(() => {
-  ctx = gsap.context(() => {
+  ctx = gsap.context((self) => {
     smoother = ScrollSmoother.create({
       smooth: 0,
       effects: true,
     });
+
+    const starLayers = self.selector('.star-layer');
+    tl = gsap
+        .timeline({repeat: -1})
+        .to(starLayers[0], {y: -1000, duration: 170}, 0)
+        .to(starLayers[1], {y: -1000, duration: 125}, 0)
   }, main.value);
 });
 onUnmounted(() => {
@@ -34,15 +40,20 @@ onUnmounted(() => {
 });
 </script>
 
-<template ref="main">
+<template>
   <NavigationComponent @toggleScroll="toggleScroll"/>
 
-  <div id="smooth-wrapper" v-bind:class="{ 'disable': disableMain }">
+  <div id="smooth-wrapper" v-bind:class="{ 'disable': disableMain }" ref="main">
     <div id="smooth-content">
-      <header class="header" data-speed="1.5">
-        <h1 class="header__title"><span>this.</span>jiří</h1>
-        <h2 class="header__subtitle">Jiří Jurčenko</h2>
-        <p class="header__caption">Student, Web Developer, Software Engineer.</p>
+      <header class="header">
+        <h1 class="header__title" data-lag="1.2"><span>this.</span>jiří</h1>
+        <h2 class="header__subtitle" data-lag="1.3">Jiří Jurčenko</h2>
+        <p class="header__caption" data-lag="1.5">Student, Web Developer, Software Engineer.</p>
+
+        <div class="star-wrapper" data-speed="1.2">
+          <div class="star-layer star-layer--1"></div>
+          <div class="star-layer star-layer--2"></div>
+        </div>
       </header>
 
       <main>
