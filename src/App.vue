@@ -46,9 +46,9 @@ onUnmounted(() => {
   <div id="smooth-wrapper" v-bind:class="{ 'disable': disableMain }" ref="main">
     <div id="smooth-content">
       <header class="header">
-        <h1 class="header__title" data-lag="1.2"><span>this.</span>jiří</h1>
-        <h2 class="header__subtitle" data-lag="1.3">Jiří Jurčenko</h2>
-        <p class="header__caption" data-lag="1.5">Student, Web Developer, Software Engineer.</p>
+        <h1 class="header__title" data-speed="1.2"><span>this.</span>jiří</h1>
+        <h2 class="header__subtitle" data-speed="1.3">Jiří Jurčenko</h2>
+        <p class="header__caption" data-speed="1.5">Student, Web Developer, Software Engineer.</p>
 
         <div class="star-wrapper" data-speed="1.2">
           <div class="star-layer star-layer--1"></div>
