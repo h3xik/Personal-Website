@@ -1,3 +1,7 @@
+@function fluidTypography($font-size, $max-size) {
+    @return clamp($font-size, 1.0774rem + 3.7936vw, $max-size);
+}
+
 // Funkce generující víc stínů pro hvězdy
 @function multiple-box-shadow($number_of_stars) {
     $value: "#{random(2000)}px #{random(2000)}px #E3E3E3"; // Původní stín
