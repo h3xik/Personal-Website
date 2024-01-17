@@ -21,31 +21,3 @@
 	color: $c-white;
 	text-decoration: none;
 }
-
-@mixin timeline-toint {
-	position: absolute;
-	transform: translateX(-19px);
-	color: $c-white;
-	background-color: $c-black;
-	font-size: 2.5rem;
-	box-shadow: 0 0 5px 5px $c-black;
-	border-radius: 50%;
-}
-
-@mixin section {
-	position: relative;
-
-	/*   margin: 0 25vw; */
-
-	/*   min-height: 100vh;
-    perspective: 900px;
-    perspective-origin: 50% 50vh;
-    height: 100%; */
-}
-
-@mixin navbar {
-	display: inherit;
-	align-items: center;
-	justify-content: flex-end;
-	z-index: 101;
-}
