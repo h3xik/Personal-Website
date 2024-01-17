@@ -4,7 +4,6 @@ body {
 }
 
 #smooth-wrapper {
-    padding: 1.5rem;
     transition: all 2s ease;
 }
 
@@ -14,6 +13,7 @@ main {
     transition: filter 0.5s ease-in-out;
     flex-direction: column;
     max-width: 960px;
+    padding-inline: 1.5rem;
     margin-inline: auto;
 
     article {
