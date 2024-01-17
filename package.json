@@ -9,11 +9,10 @@
     "build": "vite build",
     "preview": "vite preview",
     "sass": "sass --watch src/scss/main.scss:css/style.css",
-    "sass-compile": "sass src/scss/main.scss:css/style.css",
-    "stylelint": "npx stylelint '**/*.scss'",
-    "build-preview": "run-s stylelint sass-compile build preview",
+    "sass-compile": "sass --style=compressed src/scss/main.scss:css/style.css",
+    "build-preview": "run-s sass-compile build preview",
     "deploy": "run-s sass-compile build",
-    "dev-env": "run-p dev sass ",
+    "dev-env": "run-p dev sass",
     "dev-env-host": "run-p dev-host sass "
   },
   "dependencies": {
