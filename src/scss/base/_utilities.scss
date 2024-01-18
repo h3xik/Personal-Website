@@ -1,4 +1,4 @@
-.disable { filter: blur(10px) brightness(40%); }
+.disable { filter: blur(10px) }
 .ion-center { transform: translateY(12%); }
 
 /* Margins */
@@ -7,3 +7,5 @@
 .mt-m { margin-top: 15rem }
 .mt-l { margin-top: 20rem }
 .mt-xl { margin-top: 25rem }
+
+.ml-auto { margin-left: auto; }
