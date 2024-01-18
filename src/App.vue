@@ -20,6 +20,7 @@ const toggleScroll = () => {
 const main = ref();
 let disableMain = ref(false);
 let smoother, ctx, tl;
+let lights;
 
 onMounted(() => {
   ctx = gsap.context((self) => {
@@ -32,8 +33,25 @@ onMounted(() => {
     tl = gsap
         .timeline({repeat: -1})
         .to(starLayers[0], {y: -1000, duration: 170}, 0)
-        .to(starLayers[1], {y: -1000, duration: 125}, 0)
+        .to(starLayers[1], {y: -1000, duration: 125}, 0);
   }, main.value);
+
+  document.querySelector('.lights').innerHTML = '<div class="light"></div>'.repeat(30);
+
+  lights = document.querySelectorAll('.light');
+  lights.forEach((light) => {
+    const duration = gsap.utils.random(6, 15);
+    const delay = gsap.utils.random(4, 10);
+    const x = gsap.utils.random(0, 5);
+    const y = gsap.utils.random(0, 10);
+    const scale = gsap.utils.random(0.005, 0.1);
+
+    light.style.setProperty('--duration', duration);
+    light.style.setProperty('--delay', delay);
+    light.style.setProperty('--x', x);
+    light.style.setProperty('--y', y);
+    light.style.setProperty('--scale', scale);
+  });
 });
 onUnmounted(() => {
   ctx.revert();
@@ -53,6 +71,10 @@ onUnmounted(() => {
         <div class="star-wrapper" data-speed="1.2">
           <div class="star-layer star-layer--1"></div>
           <div class="star-layer star-layer--2"></div>
+        </div>
+
+        <div class="scene">
+          <div class="lights"></div>
         </div>
       </header>
 
