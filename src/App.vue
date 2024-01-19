@@ -19,7 +19,7 @@ const toggleScroll = () => {
 
 const main = ref();
 let disableMain = ref(false);
-let smoother, ctx, tlStars, tlHeader;
+let smoother, ctx, tl;
 let lights;
 
 onMounted(() => {
@@ -30,14 +30,10 @@ onMounted(() => {
     });
 
     const starLayers = self.selector('.star-layer');
-    tlStars = gsap
+    tl = gsap
         .timeline({repeat: -1})
         .to(starLayers[0], {y: -1000, duration: 170}, 0)
         .to(starLayers[1], {y: -1000, duration: 125}, 0);
-
-    tlHeader = gsap
-        .timeline()
-        .from(self.selector('.header__headings'), {y: 30, opacity: 0, ease: "power4.inOut", duration: 1.5}, 0.2)
   }, main.value);
 
   document.querySelector('.lights').innerHTML = '<div class="light"></div>'.repeat(30);
@@ -68,11 +64,9 @@ onUnmounted(() => {
   <div id="smooth-wrapper" v-bind:class="{ 'disable': disableMain }" ref="main">
     <div id="smooth-content">
       <header class="header">
-        <hgroup class="header__headings">
-          <h1 class="header__title" data-speed="1.2"><span>this.</span>jiří</h1>
-          <h2 class="header__subtitle" data-speed="1.3">Jiří Jurčenko</h2>
-          <p class="header__caption" data-speed="1.5">Student, Web Developer, Software Engineer.</p>
-        </hgroup>
+        <h1 class="header__title" data-speed="1.2"><span>this.</span>jiří</h1>
+        <h2 class="header__subtitle" data-speed="1.3">Jiří Jurčenko</h2>
+        <p class="header__caption" data-speed="1.5">Student, Web Developer, Software Engineer.</p>
 
         <div class="star-wrapper" data-speed="1.2">
           <div class="star-layer star-layer--1"></div>
