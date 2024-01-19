@@ -16,7 +16,7 @@
     "dev-env-host": "run-p dev-host sass "
   },
   "dependencies": {
-    "@dotlottie/player-component": "^2.7.5",
+    "@dotlottie/player-component": "^2.7.0",
     "@h3xik/gsap-mod": "^3.12.3",
     "sass": "^1.69.5",
     "vue": "^3.3.11"
