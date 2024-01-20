@@ -1,10 +1,8 @@
 <script setup>
-import {onMounted, onUnmounted, ref} from 'vue';
-
-import gsap from '@h3xik/gsap-mod';
+import {onUnmounted, ref} from 'vue';
 
 const main = ref();
-let tl, ctx;
+let ctx;
 
 onUnmounted(() => {
   ctx.revert();
@@ -18,13 +16,13 @@ onUnmounted(() => {
         <a href="#">.Jiří()</a>
       </li>
       <li class="navigation__list__item ml-auto">
-        <a href="https://github.com/h3xik">
-          <ion-icon name="logo-github"></ion-icon>
+        <a href="https://github.com/h3xik" aria-label="My GitHub profile">
+          <ion-icon name="logo-github" aria-hidden="true"></ion-icon>
         </a>
       </li>
       <li class="navigation__list__item">
-        <a href="mailto:contact.jiri@pm.me">
-          <ion-icon name="mail-outline"></ion-icon>
+        <a href="mailto:contact.jiri@pm.me" aria-label="Send me an email">
+          <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
         </a>
       </li>
     </ul>
