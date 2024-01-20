@@ -36,7 +36,7 @@ onMounted(() => {
         .to(starLayers[1], {y: -1000, duration: 125}, 0);
     tlHeader = gsap
         .timeline()
-        .from(self.selector('.header__headings'), {y: 30, opacity: 0, ease: "power4.inOut", duration: 1.5}, 0.2)
+        .from(self.selector('.header__headings'), {y: 30, opacity: 0, ease: "power4.inOut", duration: 1}, 0)
   }, main.value);
 
   document.querySelector('.lights').innerHTML = '<div class="light"></div>'.repeat(30);
