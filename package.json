@@ -11,6 +11,7 @@
     "sass": "sass --watch src/scss/main.scss:css/style.css",
     "sass-compile": "sass --style=compressed src/scss/main.scss:css/style.css",
     "build-preview": "run-s sass-compile build preview",
+    "netlify-deploy": "run-s sass-compile build",
     "dev-env": "run-p dev sass",
     "dev-env-host": "run-p dev-host sass "
   },
