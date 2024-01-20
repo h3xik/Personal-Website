@@ -21,7 +21,7 @@ export default defineConfig(({command, mode}) => {
                         },
                     },
                     preload: true,
-                    display: 'auto'
+                    display: 'swap'
                 },
             })
         ],
