@@ -7,19 +7,14 @@ import {ScrollSmoother} from '@h3xik/gsap-mod/ScrollSmoother';
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 
-let smoother, ctx, tlStars, tlHeader, lights;
+let smoother, ctx, tlHeader, lights;
 
 ctx = gsap.context(() => {
     smoother = ScrollSmoother.create({
         smooth: 0,
-        effects: true,
+        effects: false,
     });
 
-    const starLayers = document.querySelectorAll('.star-layer');
-    tlStars = gsap
-        .timeline({repeat: -1})
-        .to(starLayers[0], {y: -1000, duration: 170}, 0)
-        .to(starLayers[1], {y: -1000, duration: 125}, 0);
     tlHeader = gsap
         .timeline()
         .to(document.querySelector(".header__headings"), {
@@ -27,7 +22,7 @@ ctx = gsap.context(() => {
             y: "-=10",
             ease: "power4.inOut",
             duration: 0.75
-        }, 0);
+        }, 0.35);
 });
 
 document.querySelector('.lights').innerHTML = '<div class="light"></div>'.repeat(30);

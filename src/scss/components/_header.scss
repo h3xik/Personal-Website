@@ -69,6 +69,7 @@ $shadows-medium: multiple-box-shadow(150);
 
         &--1 {
             box-shadow: $shadows-small;
+            animation: stars-move 1000s linear infinite;
 
             &::after { box-shadow: $shadows-small; }
         }
@@ -77,6 +78,7 @@ $shadows-medium: multiple-box-shadow(150);
             width: 2px;
             height: 2px;
             box-shadow: $shadows-medium;
+            animation: stars-move 500s linear infinite;
 
             &::after {
                 width: 2px;

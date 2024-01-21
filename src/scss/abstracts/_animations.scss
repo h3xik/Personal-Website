@@ -12,3 +12,12 @@
         transform: scale(0);
     }
 }
+
+@keyframes stars-move {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5000px);
+    }
+}
