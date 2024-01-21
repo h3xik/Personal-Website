@@ -22,7 +22,7 @@ ctx = gsap.context(() => {
         .to(starLayers[1], {y: -1000, duration: 125}, 0);
     tlHeader = gsap
         .timeline()
-        .from(document.querySelector('.header__headings'), {y: 30, opacity: 0, ease: "power4.inOut", duration: 1}, 0)
+        .from(document.querySelector('.header__headings'), {y: 30, opacity: 0, ease: "power4.inOut", duration: 0.5}, 0)
 });
 
 document.querySelector('.lights').innerHTML = '<div class="light"></div>'.repeat(30);
