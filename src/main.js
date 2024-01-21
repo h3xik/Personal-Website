@@ -41,3 +41,5 @@ lights.forEach((light) => {
     light.style.setProperty('--y', y);
     light.style.setProperty('--scale', scale);
 });
+
+//a
