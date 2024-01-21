@@ -1,18 +1,10 @@
 import {defineConfig} from 'vite';
-import vue from '@vitejs/plugin-vue';
 import Unfonts from 'unplugin-fonts/vite'
 
 // https://vitejs.dev/config/
-export default defineConfig(({command, mode}) => {
+export default defineConfig(() => {
     return {
         plugins: [
-            vue({
-                template: {
-                    compilerOptions: {
-                        isCustomElement: (tag) => ['ion-icon', 'dotlottie-player', 'lottie-vue-player'].includes(tag),
-                    }
-                }
-            }),
             Unfonts({
                 custom: {
                     families: {
