@@ -9,6 +9,8 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 let smoother, ctx, tlStars, tlHeader, lights;
 
+const header = document.querySelector('.header__headings');
+
 ctx = gsap.context(() => {
     smoother = ScrollSmoother.create({
         smooth: 0,
@@ -22,7 +24,8 @@ ctx = gsap.context(() => {
         .to(starLayers[1], {y: -1000, duration: 125}, 0);
     tlHeader = gsap
         .timeline()
-        .from(document.querySelector('.header__headings'), {y: 30, opacity: 0, ease: "power4.inOut", duration: 0.5}, 0)
+        .from(header, {y: 30, ease: "power4", duration: 1}, 0.2)
+        .to(header, {opacity: 1, ease: "power4.inOut", duration: 1}, 0)
 });
 
 document.querySelector('.lights').innerHTML = '<div class="light"></div>'.repeat(30);

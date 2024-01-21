@@ -9,6 +9,10 @@
     -webkit-backdrop-filter: blur(8px);
     mask-image: linear-gradient(to bottom, $c-black 80%, transparent 100%);
 
+    &__headings {
+        opacity: 0;
+    }
+    
     &__title {
         @include header;
 
