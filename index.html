@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="cs" dir="ltr">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -14,16 +14,19 @@
     <link rel="shortcut icon" href="src/assets/icons/favicon.ico">
     <meta name="msapplication-TileColor" content="#2b5797">
     <meta name="msapplication-config" content="src/assets/browserconfig.xml">
-    <meta name="theme-color" content="#ffffff">
-    
+    <meta name="theme-color" content="#131210">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
     <meta name="robots" content="follow">
-    <meta property="og:title" content="this.Jiří" />
+    <meta property="og:title" content="this.Jiří"/>
     <meta property="og:url" content="https://www.h3xik.eu/"/>
-    <meta property="og:description" content="Jiřího osobní webovká stránka." />
-    <meta property="og:image" content="https://s6.imgcdn.dev/fXh7a.jpg" />
-    <meta property="og:type" content="website" />
-    <meta property="og:locale" content="cs_CZ" />
-    
+    <meta property="og:description" content="Jiřího osobní webovká stránka."/>
+    <meta property="og:image" content="https://s6.imgcdn.dev/tYjPH.jpg"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="cs_CZ"/>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
 
@@ -89,6 +92,7 @@
                     <span>HTML</span>
                     <span>CSS</span>
                     <span>Sass</span>
+                    <span>ASP.Net</span>
                     <span>Vite</span>
                     <span>Git</span>
                     <span>Jira</span>
@@ -96,69 +100,69 @@
                     <span>GSAP</span>
                     <span>GitHub</span>
                     <span>C# (.NET)</span>
-                    <span>Razor Pages</span>
                     <span>EF Core</span>
                     <span>Python</span>
                     <span>Netlify</span>
                 </div>
             </article>
         </main>
-
+        
         <footer class="footer">
             <dotlottie-player
                     aria-hidden="true"
-                    class="footer__lottie"
                     src="https://lottie.host/7524b2dc-1b44-431d-9b36-9c8e19675f6f/Qv7gutcirl.lottie"
                     speed="1"
-                    style="width: 300px; height: 300px;" loop
+                    style="width: 300px; height: 300px;"
                     loop
                     autoplay
                     loading="lazy">
             </dotlottie-player>
 
-            <h4 class="footer__title">Vytvořeno s pomocí:</h4>
-            <ul class="footer__list footer__list--main">
+            <h4>Vytvořeno s pomocí:</h4>
+
+            <ul class="footer__main-list">
                 <li>
-                    <ul class="footer__list footer__list--secondary">
-                        <li class="footer__list__title">this.{}</li>
-                        <li class="footer__mb">HTML, SCSS</li>
-                        <li class="footer__list footer__list--last">GSAP 3</li>
+                    <h5>this.{}</h5>
+                    <ul class="footer__secondary-list">
+                        <li>HTML, SCSS</li>
+                        <li>JavaScript</li>
+                        <li>GSAP 3</li>
                     </ul>
                 </li>
+
                 <li>
-                    <ul class="footer__list footer__list--secondary">
-                        <li class="footer__list__title">~</li>
-                        <li class="footer__mb">Google Fonts</li>
-                        <li class="footer__mb">Ionicons.com</li>
-                        <li class="footer__list footer__list--last">Lottiefiles.com</li>
+                    <h5>~</h5>
+                    <ul class="footer__secondary-list">
+                        <li>Google Fonts</li>
+                        <li>Ionicons.com</li>
+                        <li>Lottiefiles.com</li>
                     </ul>
                 </li>
+
                 <li>
-                    <ul class="footer__list footer__list--secondary">
-                        <li class="footer__list__title">Speciální poděkování</li>
-                        <li class="footer__list--last">
-                            Kočičkám
-                            <ion-icon
-                                    aria-hidden="true"
-                                    name="logo-octocat"
-                                    class="ion-center"
-                            ></ion-icon>
+                    <h5>Kde mě najdete?</h5>
+                    <ul class="footer__secondary-list">
+                        <li>
+                            <a href="https://www.instagram.com/this.jiri?igsh=MXFyYjl5MHA0bHhueg%3D%3D">Instagram</a>
+                            <ion-icon aria-hidden="true" name="logo-instagram"></ion-icon>
+                        </li>
+                        <li>
+                            <a href="https://github.com/h3xik">Github</a>
+                            <ion-icon aria-hidden="true" name="logo-octocat"></ion-icon>
                         </li>
                     </ul>
                 </li>
             </ul>
-            <p class="footer__text">
-                S
-                <ion-icon class="ion-center" name="heart" aria-label="láskou"></ion-icon>
-                vytvořil Jiří Jurčenko.
+
+            <p>
+                S <ion-icon name="heart" aria-label="láskou"></ion-icon> vytvořil Jiří Jurčenko.
             </p>
         </footer>
     </div>
 </div>
 
-<script type="module" async src="./src/main.js"></script>
-<script type="module" async src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script async src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"
-        type="module"></script>
+<script type="module" src="./src/main.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+<script type="module" src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs"></script>
 </body>
 </html>

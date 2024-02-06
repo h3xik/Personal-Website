@@ -2,7 +2,6 @@
 @import "dist/normalize";
 
 // Abstracts <-
-@import "abstracts/animations";
 @import "abstracts/functions";
 @import "abstracts/mixins";
 @import "abstracts/variables";
@@ -15,9 +14,6 @@
 @import "components/footer";
 @import "components/header";
 @import "components/navigation";
-@import "components/vpriprave";
-
-// Layout <-
 
 // Page specific <-
 @import "pages/404";
