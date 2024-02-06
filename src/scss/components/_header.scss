@@ -42,6 +42,15 @@
 $shadows-small: multiple-box-shadow(300);
 $shadows-medium: multiple-box-shadow(150);
 
+@keyframes stars-move {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-5000px);
+    }
+}
+
 .star-wrapper {
     position: absolute;
     top: 0;
@@ -96,6 +105,13 @@ $hue-3: 141;
 $alpha-1: 0.14624530650662304;
 $alpha-2: 0.1511207302417027;
 $alpha-3: 0.9812733645247064;
+
+@keyframes shift {
+    50% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
 
 .scene { z-index: -2; }
 
