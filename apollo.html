@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>this.Jiří | Apollo</title>
+    <meta name="description" content="this.Jiří - Projekt Apollo">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="src/assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="src/assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="src/assets/icons/favicon-16x16.png">
+    <link rel="manifest" href="src/assets/site.webmanifest">
+    <link rel="mask-icon" href="src/assets/icons/safari-pinned-tab.svg" color="#8e8e8e">
+    <link rel="shortcut icon" href="src/assets/icons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#2b5797">
+    <meta name="msapplication-config" content="src/assets/browserconfig.xml">
+    <meta name="theme-color" content="#131210">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+    <meta name="robots" content="follow">
+    <meta property="og:title" content="this.Jiří"/>
+    <meta property="og:url" content="https://www.h3xik.eu/"/>
+    <meta property="og:description" content="Jiřího osobní webovká stránka."/>
+    <meta property="og:image" content="https://s6.imgcdn.dev/tYjPH.jpg"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:locale" content="cs_CZ"/>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navigation">
+    <ul class="navigation__list">
+        <li class="navigation__list__item">
+            <a href="index.html">.Jiří()</a>
+        </li>
+        <li class="navigation__list__item ml-auto">
+            <a href="https://github.com/h3xik" aria-label="My GitHub profile">
+                <ion-icon name="logo-github" aria-hidden="true"></ion-icon>
+            </a>
+        </li>
+        <li class="navigation__list__item">
+            <a href="mailto:contact.jiri@pm.me" aria-label="Send me an email">
+                <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
+            </a>
+        </li>
+    </ul>
+</nav>
+
+<main class="project">
+    <p class="project__label project__label--project">Projekt</p>
+    <h1 class="project__title">Apollo</h1>
+
+    <p class="project__label project__label--stack">Tech stack:</p>
+    <p class="project__stack">SvelteKit, .Net Web Api, .Net Core</p>
+
+    <p class="project__description ">Software pro správu fitness centra
+        a záznamů o klientech. Aplikace
+        poskytuje moderní a intuitivní
+        uživatelské rozhraní a tím zefektivňuje každodenní práci personálu.
+
+        Apollo implementuje autentikaci pomocí bezkontaktních tagů a tím zjednodušuje život i klientům, kteří mohou
+        jednoduše prokázat své členství.
+
+        V plánu je i implementace klientského portálu, kde se zákazníci budou moct přihlásit na skupinové tréninky a
+        další.</p>
+
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="src/assets/apollo-1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="src/assets/apollo-2.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="src/assets/apollo-3.jpg" alt=""></div>
+        </div>
+
+        <div class="swiper-button-prev">
+        </div>
+        <div class="swiper-button-next">
+        </div>
+    </div>
+
+    <p class="project__info">Více informací najdete na <a href="https://github.com/h3xik/Apollo"
+                                                          class="project__info--link">GitHubu</a></p>
+</main>
+
+<script type="module" src="src/apollo.js"></script>
+<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+</body>
+</html>

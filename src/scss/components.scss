@@ -1,3 +1,4 @@
+/// Styles for the projects cards component. This component is located on the main page.
 .projects {
   display: grid;
   grid-template-columns: 1fr;
@@ -50,5 +51,74 @@
   
   @media screen and (width >= 650px) {
 	grid-template-columns: 1fr 1fr;
+  }
+}
+
+/// Styles for the specific project page.
+.project {
+  display: flex;
+  flex-direction: column;
+  margin: 13rem auto;
+  max-width: 50rem;
+  
+  @media screen and (width <= 800px) {
+	margin: 13rem 5vw;
+  }
+  
+  &__title {
+	color: $c-brand;
+	font-size: 2.25rem;
+	margin: 0 0 3rem 0;
+  }
+  
+  &__stack {
+	color: $c-brand-white;
+	font-size: 0.85rem;
+	margin-bottom: 3rem;
+  }
+  
+  &__info {
+	color: $c-gray--3;
+	font-size: 0.85rem;
+	
+	& > a {
+	  color: $c-brand;
+	  font-weight: 500;
+	  text-underline-offset: 3px;
+	  transition: all 0.2s;
+	  
+	  &:hover {
+		text-underline-offset: 4px;
+	  }
+	}
+  }
+  
+  &__description {
+	color: $c-gray--3;
+	font-size: 1rem;
+	margin-bottom: 3rem;
+	line-height: 1.4;
+	max-width: 50rem;
+  }
+  
+  &__label {
+	font-size: 0.85rem;
+	color: $c-gray--2;
+	margin-bottom: 0.5rem;
+  }
+}
+
+.swiper {
+  width: 600px;
+  margin-bottom: 3rem;
+  position: relative;
+  
+  & img {
+	width: 100%;
+	display: block;
+  }
+  
+  & .swiper-button-prev, .swiper-button-next {
+	color: $c-brand;
   }
 }
