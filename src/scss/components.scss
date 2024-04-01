@@ -1,0 +1,48 @@
+.projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas: "title title" "content content";
+  
+  & h3 {
+	grid-area: title;
+	margin-bottom: 1.5em;
+  }
+  
+  &__project {
+	background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.05) 100%);
+	border: solid 1px $c-gray--2;
+	border-radius: 3px;
+	padding: 1.5rem 1rem;
+	display: flex;
+	flex-direction: column;
+
+	&__title {
+	  color: $c-brand;
+	  font-size: 1.2rem;
+	  margin-bottom: 0.3em;
+	}
+
+	&__stack {
+	  color: rgba(255, 255, 255, 0.5);
+	  font-size: 0.75rem;
+	  margin-bottom: 1.5em;
+	}
+
+	&__description {
+	  color: $c-gray--3;
+	  font-size: 0.85rem;
+	  margin-bottom: 2em;
+	}
+
+	&__link {
+	  color: $c-brand-white;
+	  font-size: 0.7rem;
+	  align-self: end;
+	  margin-right: 1em;
+	}
+  }
+  
+  @media screen and (width >= 650px) {
+	grid-template-columns: 1fr 1fr;
+  }
+}
