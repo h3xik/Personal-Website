@@ -58,11 +58,13 @@
 .project {
   display: flex;
   flex-direction: column;
-  margin: 13rem auto;
+  padding: 8rem 5vw 5rem 5vw;
   max-width: 50rem;
+  overflow: hidden;
   
-  @media screen and (width <= 800px) {
-	margin: 13rem 5vw;
+  @media screen and (width >= 900px) {
+	padding-top: 13rem;
+	margin-inline: auto;
   }
   
   &__title {
@@ -109,8 +111,9 @@
 }
 
 .swiper {
-  width: 600px;
-  margin-bottom: 3rem;
+  width: 100%;
+  max-width: 600px;
+  margin-block: 1rem 3rem;
   position: relative;
   
   & img {
@@ -120,5 +123,30 @@
   
   & .swiper-button-prev, .swiper-button-next {
 	color: $c-brand;
+	
+	&:after {
+	  font-size: 1.5rem;
+
+	  @media screen and (width >= 900px) {
+		font-size: 2.5rem;
+	  }
+	}
+  }
+}
+
+.aurora {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -3;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  opacity: 85%;
+  
+  &--red {
+	& .light {
+	  background: linear-gradient(0deg, transparent, $c-brand-darker 10%, transparent, $c-brand 40%, transparent, $c-brand-lighter 60%) center bottom no-repeat;
+	}
   }
 }
