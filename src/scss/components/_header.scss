@@ -113,11 +113,13 @@ $alpha-3: 0.9812733645247064;
 }
 
 
-.scene { z-index: -2; }
+.scene {
+    z-index: -2;
+}
 
 .lights {
     position: absolute;
-    top: 50%;
+    top: 20%;
     left: 50%;
     z-index: -2;
     display: flex;
