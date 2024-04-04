@@ -22,3 +22,16 @@
 	color: $c-white;
 	text-decoration: none;
 }
+
+@mixin Content {
+  display: flex;
+  flex-direction: column;
+  padding: 8rem 5vw 5rem 5vw;
+  max-width: 50rem;
+  overflow: hidden;
+
+  @media screen and (width >= 900px) {
+	padding-top: 13rem;
+	margin-inline: auto;
+  }
+}

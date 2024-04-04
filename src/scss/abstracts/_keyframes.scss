@@ -1,0 +1,14 @@
+@keyframes stars-move {
+  0% {
+	transform: translateY(0);
+  }
+  100% {
+	transform: translateY(-5000px);
+  }
+}
+
+@keyframes aurora-shift {
+  50% {
+	transform: translate(0, 0) scale(1);
+  }
+}

@@ -3,20 +3,15 @@
 
 // Abstracts <-
 @import "abstracts/functions";
+@import "abstracts/keyframes";
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
-// Base files <-
-@import "base/base";
-@import "base/utilities";
-
 // Components <-
-@import "components/footer";
 @import "components/header";
-@import "components/navigation";
 
 // Page specific <-
-@import "pages/404";
 @import "pages/mainpage";
 
+@import "base";
 @import "components";

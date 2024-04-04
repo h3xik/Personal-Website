@@ -39,18 +39,6 @@
 }
 
 // Hvězdy --------------------------------------------------
-$shadows-small: multiple-box-shadow(300);
-$shadows-medium: multiple-box-shadow(150);
-
-@keyframes stars-move {
-    0% {
-        transform: translateY(0);
-    }
-    100% {
-        transform: translateY(-5000px);
-    }
-}
-
 .star-wrapper {
     position: absolute;
     top: 0;
@@ -99,20 +87,6 @@ $shadows-medium: multiple-box-shadow(150);
 }
 
 // Záře --------------------------------------------------
-$hue-1: 147;
-$hue-2: 291;
-$hue-3: 141;
-$alpha-1: 0.14624530650662304;
-$alpha-2: 0.1511207302417027;
-$alpha-3: 0.9812733645247064;
-
-@keyframes shift {
-    50% {
-        transform: translate(0, 0) scale(1);
-    }
-}
-
-
 .scene {
     z-index: -2;
 }
@@ -140,7 +114,7 @@ $alpha-3: 0.9812733645247064;
     background: linear-gradient(0deg, transparent, $color-one 10%, transparent, $color-two 40%, transparent, $color-three 60%) center bottom no-repeat;
     background-size: 100% 40vmax;
     transform: translate($left, $up) scale(1);
-    animation: shift calc(var(--duration, 2) * 1s) calc(var(--delay, 0) * -1s) infinite ease;
+    animation: aurora-shift calc(var(--duration, 2) * 1s) calc(var(--delay, 0) * -1s) infinite ease;
     flex: 1;
 
     @media (width < 768px) {
