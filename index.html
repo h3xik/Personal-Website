@@ -31,18 +31,14 @@
 </head>
 
 <body>
-<nav class="navigation">
-    <ul class="navigation__list">
-        <li class="navigation__list__item">
-            <a href="#">.Jiří()</a>
-        </li>
-        <li class="navigation__list__item ml-auto">
+<nav class="navigation-container">
+    <ul class="navigation">
+        <a href="#" class="navigation__logo">.Jiří()</a>
+        <li class="navigation__icons">
             <a href="https://github.com/h3xik" aria-label="My GitHub profile">
                 <ion-icon name="logo-github" aria-hidden="true"></ion-icon>
             </a>
-        </li>
-        <li class="navigation__list__item">
-            <a href="mailto:contact.jiri@pm.me" aria-label="Send me an email">
+            <a href="contact.html" aria-label="Send me a message">
                 <ion-icon name="mail-outline" aria-hidden="true"></ion-icon>
             </a>
         </li>
@@ -51,7 +47,7 @@
 
 <div id="smooth-wrapper">
     <div id="smooth-content">
-        <header class="header">
+        <header class="header" data-speed="0.5">
             <hgroup class="header__headings">
                 <h1 class="header__title" data-speed="1.2"><span>this.</span>jiří</h1>
                 <h2 class="header__subtitle" data-speed="1.3">Jiří Jurčenko</h2>
@@ -99,22 +95,24 @@
                     <span>GitHub Pages</span>
                     <span>GSAP</span>
                     <span>GitHub</span>
-                    <span>C# (.NET)</span>
+                    <span>C# (.Net)</span>
                     <span>EF Core</span>
                     <span>Python</span>
-                    <span>Netlify</span>
+                    <span>SvelteKit</span>
+                    <span>Nginx</span>
+                    <span>Node</span>
                 </div>
             </article>
 
             <article class="projects">
                 <h3>Projekty</h3>
 
-                <div class="projects__project">
-                    <h4 class="projects__project__title">Apollo</h4>
-                    <p class="projects__project__stack">SvelteKit, .Net Core Api</p>
-                    <p class="projects__project__description">Kompletní softwarové řešení pro správu posilovny a vedení záznamů o
+                <div class="project">
+                    <p class="project__title">Apollo</p>
+                    <p class="project__stack">SvelteKit, .Net Core Api</p>
+                    <p class="project__description">Kompletní softwarové řešení pro správu posilovny a vedení záznamů o
                         klientech a dalším personálu.</p>
-                    <a href="apollo.html" class="projects__project__link">Další informace</a>
+                    <a href="apollo.html" class="project__link">Další informace</a>
                 </div>
             </article>
         </main>
