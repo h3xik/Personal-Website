@@ -1,0 +1,305 @@
+/// Styles for the navigation.
+.navigation-container {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  padding: 1.5em 1em 2.5em;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.navigation {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding-inline: 1.25rem;
+  font-size: 1.1rem;
+
+  &__logo {
+	color: $c-brand-darker;
+	text-decoration: none;
+  }
+
+  &__icons > a {
+	color: inherit;
+	margin-left: 1.25em;
+	text-decoration: none;
+	transition: all 0.2s ease;
+
+	&:hover {
+	  color: $c-brand-lighter;
+	}
+
+	& ion-icon {
+	  font-size: 1.5rem;
+	}
+  }
+}
+
+/// Styles for the projects cards component. This component is located on the main page.
+.projects {
+  display: grid;
+  grid-template-areas: "title title" "content content";
+  grid-template-columns: 1fr;
+
+  & h3 {
+	grid-area: title;
+	margin-bottom: 1.5em;
+  }
+
+  & .project {
+	background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.05) 100%);
+	border: solid 1px $c-gray--2;
+	border-radius: 3px;
+	display: flex;
+	flex-direction: column;
+	padding: 1.5rem 1rem;
+	transition: all .2s;
+
+	&:hover {
+	  border-color: $c-brand;
+	  transform: translateY(-2px);
+	}
+
+	&__title {
+	  color: $c-brand;
+	  font-size: 1.2rem;
+	  margin-bottom: 0.3em;
+	}
+
+	&__stack {
+	  color: rgba(255, 255, 255, 0.5);
+	  font-size: 0.75rem;
+	  margin-bottom: 1.5em;
+	}
+
+	&__description {
+	  color: $c-gray--3;
+	  font-size: 0.85rem;
+	  margin-bottom: 2em;
+	}
+
+	&__link {
+	  align-self: end;
+	  color: $c-brand-white;
+	  font-size: 0.7rem;
+	  margin-right: 1em;
+	}
+  }
+
+  @media screen and (width >= 650px) {
+	grid-template-columns: 1fr 1fr;
+  }
+}
+
+/// Styles for the specific project page.
+.project {
+  @include Content;
+
+  &__title {
+	color: $c-brand;
+	font-size: 2rem;
+
+	margin: 0 0 3rem 0;
+  }
+
+  &__stack {
+	color: $c-brand-white;
+	font-size: 0.85rem;
+	margin-bottom: 3rem;
+  }
+
+  &__info {
+	color: $c-gray--3;
+	font-size: 0.85rem;
+
+	& > a {
+	  color: $c-brand;
+	  font-weight: 500;
+	  text-underline-offset: 3px;
+	  transition: all 0.2s;
+
+	  &:hover {
+		text-underline-offset: 4px;
+	  }
+	}
+  }
+
+  &__description {
+	color: $c-gray--3;
+	font-size: 1rem;
+	line-height: 1.4;
+	margin-bottom: 3rem;
+	max-width: 50rem;
+  }
+}
+
+.label {
+  color: $c-gray--2;
+  font-size: 0.85rem;
+  margin-bottom: 0.5rem;
+}
+
+.swiper {
+  margin-block: 1rem 3rem;
+  max-width: 600px;
+  position: relative;
+  width: 100%;
+
+  & img {
+	display: block;
+	width: 100%;
+  }
+
+  & .swiper-button-prev, .swiper-button-next {
+	color: $c-brand;
+
+	&:after {
+	  font-size: 1.5rem;
+
+	  @media screen and (width >= 900px) {
+		font-size: 2.5rem;
+	  }
+	}
+  }
+}
+
+.aurora {
+  height: 100%;
+  left: 0;
+  opacity: 70%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -3;
+
+  &--red {
+	& .light {
+	  background: linear-gradient(0deg, transparent, $c-brand-darker 10%, transparent, $c-brand 40%, transparent, $c-brand-lighter 60%) center bottom no-repeat;
+	}
+  }
+}
+
+.input {
+  background: $c-gray--1;
+  border: solid 1px $c-gray--2;
+  border-radius: 3px;
+  color: $c-gray--3;
+  font-size: 0.85rem;
+  padding: 0.5rem 0.75rem;
+  transition: all 0.2s;
+
+  &::placeholder {
+	color: $c-gray--2;
+  }
+
+  &:focus {
+	border-color: $c-brand-lighter;
+	outline: none;
+  }
+}
+
+
+.contact {
+  @include Content;
+
+  & .input {
+	margin-bottom: 1.5rem;
+
+	&--big {
+	  height: 15rem;
+	  resize: none;
+	}
+  }
+
+  & .buttons {
+	align-self: end;
+
+	& a {
+	  color: $c-gray--3;
+	  font-size: 0.85rem;
+	  margin-right: 1.5rem;
+	  transition: all 0.2s;
+
+	  &:hover {
+		text-underline-offset: 3px;
+	  }
+	}
+
+	& button[type="submit"] {
+	  background: $c-brand;
+	  border: none;
+	  border-radius: 3px;
+	  color: $c-brand-white;
+	  cursor: pointer;
+	  font-size: 0.85rem;
+	  padding: 0.5rem 1rem;
+	  width: 7rem;
+	}
+  }
+}
+
+.footer {
+  @include paragraph-typography;
+  margin-top: 10vh;
+
+  & h4 {
+	color: $c-brand;
+	font-size: 1.25rem;
+	margin: 0 13% 65px 13%;
+  }
+
+  & h5 {
+	color: $c-brand-white;
+	font-size: 1.2rem;
+	font-weight: 700;
+	margin-bottom: .5em;
+  }
+
+  & a {
+	color: $c-white;
+	font-weight: 500;
+	text-underline-offset: 3px;
+	transition: color 0.3s ease;
+
+	&:hover { color: $c-brand; }
+  }
+
+  &__main-list {
+	display: flex;
+	font-weight: 500;
+	justify-content: space-between;
+	list-style: none;
+	margin: 0 13% 15%;
+
+	@media screen and (width <= 900px) {
+	  flex-direction: column;
+
+	  & > * { margin-bottom: 5em; }
+	}
+  }
+
+  &__secondary-list {
+	display: flex;
+	flex-direction: column;
+	font-weight: 400;
+	list-style: none;
+
+	& li {
+	  margin-block: .3em;
+	}
+  }
+
+  & > p {
+	color: $c-brand-white;
+	font-size: 0.9rem;
+	padding-bottom: 50px;
+	text-align: center;
+
+	& ion-icon { color: $c-brand; }
+  }
+}
