@@ -1,5 +1,3 @@
-import 'unfonts.css';
-
 import gsap from '@h3xik/gsap-mod';
 import {ScrollTrigger} from '@h3xik/gsap-mod/ScrollTrigger';
 import {ScrollSmoother} from '@h3xik/gsap-mod/ScrollSmoother';
