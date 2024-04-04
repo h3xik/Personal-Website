@@ -11,8 +11,8 @@ let smoother, ctx, tlHeader, lights;
 
 ctx = gsap.context(() => {
     smoother = ScrollSmoother.create({
-        smooth: 0,
-        effects: false,
+        smooth: 1,
+        effects: true,
     });
 
     tlHeader = gsap
