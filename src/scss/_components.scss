@@ -224,6 +224,7 @@
 	  color: $c-gray--3;
 	  font-size: 0.85rem;
 	  margin-right: 1.5rem;
+	  text-underline-offset: 2px;
 	  transition: all 0.2s;
 
 	  &:hover {
@@ -233,13 +234,23 @@
 
 	& button[type="submit"] {
 	  background: $c-brand;
-	  border: none;
+	  border: solid 1px $c-brand;
 	  border-radius: 3px;
-	  color: $c-brand-white;
+	  color: $c-white;
 	  cursor: pointer;
 	  font-size: 0.85rem;
 	  padding: 0.5rem 1rem;
 	  width: 7rem;
+	  transition: all 0.2s;
+	  
+	  &:hover {
+		border-color: $c-brand-lighter;
+	  }
+	  
+	  &:active {
+		border-color: $c-brand-darker;
+		background: $c-brand-darker;
+	  }
 	}
   }
 }
