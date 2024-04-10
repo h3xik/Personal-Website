@@ -18,5 +18,11 @@ html {
 
 body {
   background-color: $c-black;
+  color: $c-gray--3;
   overflow-y: scroll;
+  position: relative;
+}
+
+#smooth-wrapper {
+  transition: all 2s ease;
 }

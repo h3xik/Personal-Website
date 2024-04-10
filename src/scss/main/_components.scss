@@ -1,3 +1,31 @@
+main {
+  position: relative;
+  display: flex;
+  transition: filter 0.5s ease-in-out;
+  flex-direction: column;
+  max-width: 960px;
+  padding-inline: 1.5rem;
+  margin-inline: auto;
+
+  article {
+	margin: 2em 0.5em;
+
+	h3 {
+	  margin-bottom: 0.85em;
+	  font-style: normal;
+	  font-weight: 600;
+	  letter-spacing: .5px;
+	  color: $c-brand;
+	  font-size: 1.5rem;
+	}
+
+	p {
+	  line-height: 1.8;
+	  font-size: 0.95rem;
+	}
+  }
+}
+
 /// Styles for the navigation.
 .navigation-container {
   -webkit-backdrop-filter: blur(8px);
@@ -39,6 +67,156 @@
   }
 }
 
+.header {
+  position: relative;
+  height: 100lvh;
+  padding: 25lvh 0;
+  overflow: hidden;
+  text-align: center;
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  mask-image: linear-gradient(to bottom, $c-black 80%, transparent 100%);
+
+  &__headings {
+	opacity: 0;
+	transform: translateY(1em);
+  }
+
+  &__title {
+	@include header;
+
+	font-size: fluidTypography(2.4rem, 3.2rem);
+	font-weight: 500;
+
+	& > span { color: $c-brand-darker; }
+  }
+
+  &__subtitle {
+	@include header;
+
+	margin-bottom: 5rem;
+	font-size: fluidTypography(0.75rem, 1rem);
+  }
+
+  &__caption {
+	@include header;
+
+	font-size: fluidTypography(0.65rem, 0.9rem);
+	color: $c-brand-lighter;
+  }
+}
+
+/// Styles for header.
+// Hvězdy
+.star-wrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -3;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(to bottom, #050403 0%, #131210 100%);
+
+  .star-layer {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	background: transparent;
+
+	&::after {
+	  content: " ";
+	  position: absolute;
+	  top: 2000px;
+	  width: 1px;
+	  height: 1px;
+	  background: transparent;
+	}
+
+	&--1 {
+	  box-shadow: $shadows-small;
+	  animation: stars-move 1000s linear infinite;
+
+	  &::after { box-shadow: $shadows-small; }
+	}
+
+	&--2 {
+	  width: 2px;
+	  height: 2px;
+	  box-shadow: $shadows-medium;
+	  animation: stars-move 500s linear infinite;
+
+	  &::after {
+		width: 2px;
+		height: 2px;
+		box-shadow: $shadows-medium;
+	  }
+	}
+  }
+}
+
+// Záře
+.scene {
+  z-index: -2;
+}
+
+.lights {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  z-index: -2;
+  display: flex;
+  width: 200vmax;
+  height: 100vmax;
+  filter: blur(75px) brightness(55%);
+  transform: translate(-20%, -55%) rotate(30deg);
+}
+
+.light {
+  $color-one: #015268;
+  $color-two: #025385;
+  $color-three: #038298;
+  $up: calc(var(--y, 10) * 2vmax);
+  $left: calc(var(--x, 2) * 2vmax);
+
+  z-index: -2;
+  background: linear-gradient(0deg, transparent, $color-one 10%, transparent, $color-two 40%, transparent, $color-three 60%) center bottom no-repeat;
+  background-size: 100% 40vmax;
+  transform: translate($left, $up) scale(1);
+  animation: aurora-shift calc(var(--duration, 2) * 1s) calc(var(--delay, 0) * -1s) infinite ease;
+  flex: 1;
+
+  @media (width < 768px) {
+	$up: calc(var(--y, 10) * 2vmax);
+	$left: calc(var(--x, 2) * 2vmax);
+  }
+}
+
+/// Styles for the shillset component.
+.skillset {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5em;
+
+  span {
+	padding: 0.4em 0.5em;
+	font-size: 0.80rem;
+	font-weight: 400;
+	color: inherit;
+	background-color: $c-gray--1;
+	border: solid 1px $c-gray--2;
+	border-radius: 3px;
+	transition: all .2s;
+	cursor: default;
+
+	&:hover {
+	  border: solid 1px $c-brand-lighter;
+	  transform: translateY(-2px);
+	}
+  }
+}
+
 /// Styles for the projects cards component. This component is located on the main page.
 .projects {
   display: grid;
@@ -50,7 +228,7 @@
 	margin-bottom: 1.5em;
   }
 
-  & .project {
+  & .project-card {
 	background: radial-gradient(circle, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.05) 100%);
 	border: solid 1px $c-gray--2;
 	border-radius: 3px;

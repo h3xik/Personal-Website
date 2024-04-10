@@ -7,11 +7,6 @@
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
-// Components <-
-@import "components/header";
-
-// Page specific <-
-@import "pages/mainpage";
-
-@import "base";
-@import "components";
+// Main stylesheets <-
+@import "main/base";
+@import "main/components";
