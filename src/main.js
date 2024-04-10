@@ -1,11 +1,13 @@
 import gsap from '@h3xik/gsap-mod';
-import {ScrollTrigger} from '@h3xik/gsap-mod/ScrollTrigger';
-import {ScrollSmoother} from '@h3xik/gsap-mod/ScrollSmoother';
+import { ScrollTrigger } from '@h3xik/gsap-mod/ScrollTrigger';
+import { ScrollSmoother } from '@h3xik/gsap-mod/ScrollSmoother';
+import { injectSpeedInsights } from '@vercel/speed-insights';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-
 let smoother, ctx, tlHeader, lights;
+
+injectSpeedInsights();
 
 ctx = gsap.context(() => {
     smoother = ScrollSmoother.create({

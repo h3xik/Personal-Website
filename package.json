@@ -18,6 +18,7 @@
   "dependencies": {
     "@dotlottie/player-component": "^2.7.0",
     "@h3xik/gsap-mod": "^3.12.3",
+    "@vercel/speed-insights": "^1.0.10",
     "sass": "^1.69.5",
     "swiper": "^11.1.0"
   },
